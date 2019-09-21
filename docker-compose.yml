@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  vscode:
+    image: codercom/code-server:v2
+    container_name: vscode
+    restart: always
+    volumes:
+      - ./workshop:/home/coder/project
+      - ./.local:/home/coder/.local/share/code-server
+    ports:
+      - 8080:8080
+
