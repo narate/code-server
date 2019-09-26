@@ -1,11 +1,12 @@
 version: '3.7'
 services:
   vscode:
-    image: codercom/code-server:v2
+    build: .
     container_name: vscode
     user: root
     restart: always
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./:/home/coder/project
       - ./.local:/home/coder/.local/share/code-server
     ports:
