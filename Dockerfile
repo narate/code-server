@@ -1,4 +1,4 @@
-FROM codercom/code-server:v2
+FROM codercom/code-server
 LABEL maintainer="Narate Ketram <koonnarate@gmail.com>"
 USER root
 ENV DOCKER_VERSION=19.03.2
@@ -8,7 +8,7 @@ RUN cd /tmp  & \
     cp docker/docker /usr/local/bin/docker && \
     rm -rf docker* && \
     apt-get update && \
-    apt-get install -y --no-install-recommends python-pip && \
+    apt-get install -y --no-install-recommends python-pip python-dev build-essential && \
     rm -rf /var/lib/apt/lists/* && \
     pip install setuptools && \
     pip install docker-compose && \

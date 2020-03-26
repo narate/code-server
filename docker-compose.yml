@@ -10,4 +10,4 @@ services:
       - ./:/home/coder/project
       - ./.local:/home/coder/.local/share/code-server
     ports:
-      - 127.0.0.1:8080:8080
+      - 8080:8080
