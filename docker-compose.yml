@@ -10,3 +10,4 @@ services:
       - ./.local:/home/coder/.local/share/code-server
     ports:
       - 8080:8080
+    command: --auth none
